@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+        <import type="androidx.lifecycle.MutableLiveData"/>
+        <import type="com.matematik.antremani.model.view.ToolScreen" />
+        <variable name="bonusListener" type="com.matematik.antremani.impl.BonusImpl" />
+        <variable name="tool" type="com.matematik.antremani.model.view.ToolScreen" />
+        <variable name="loading" type="Boolean" />
+
+    </data>
+
+    <LinearLayout
+        style="@style/fragmentStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.screen.game.GameJigsawFragment">
+
+        <LinearLayout
+            android:id="@+id/linearDrawUi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="@{loading ? View.GONE : View.VISIBLE}">
+
+            <include
+                android:id="@+id/includeGameTool"
+                layout="@layout/include_game_tool"
+                app:tool="@{tool}"
+                app:bonusListener="@{bonusListener}" />
+
+            <LinearLayout
+                style="@style/gameScreenUserInteraction"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="0.75"
+                    android:background="@drawable/shape_corner_box"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtDrawQuestion"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="15dp"
+                        android:textColor="@color/questionText"
+                        android:textStyle="bold"
+                        app:autoSizeMaxTextSize="35sp"
+                        app:autoSizeTextType="uniform" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="8"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnDrawClear"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/game_draw_clean"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/btnRecognize"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/game_draw_okey"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/drawUserInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape_corner_box"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btnRecognize" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="@{loading ? View.VISIBLE : View.GONE}">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:indeterminate="true"
+                android:indeterminateBehavior="cycle"
+                android:indeterminateOnly="false"
+                android:max="100"
+                android:progress="100"
+                android:progressDrawable="@drawable/shape_progressbar"
+                android:rotation="-90"
+                android:rotationY="180"
+                android:saveEnabled="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/gamePuzzleFragment"
+        android:name="com.matematik.antremani.view.screen.game.GamePuzzleFragment"
+        android:label="fragment_game_puzzle"
+        tools:layout="@layout/fragment_game_puzzle" />
+    <fragment
+        android:id="@+id/gameSymbolFragment"
+        android:name="com.matematik.antremani.view.screen.game.GameSymbolFragment"
+        android:label="fragment_game_symbol"
+        tools:layout="@layout/fragment_game_symbol" />
+    <fragment
+        android:id="@+id/gameClassicFragment"
+        android:name="com.matematik.antremani.view.screen.game.GameClassicFragment"
+        android:label="fragment_game_classic"
+        tools:layout="@layout/fragment_game_classic" />
+    <fragment
+        android:id="@+id/customFragment"
+        android:name="com.matematik.antremani.view.screen.CustomFragment"
+        android:label="fragment_custom"
+        tools:layout="@layout/fragment_custom" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.matematik.antremani.view.screen.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/gameLogicFragment"
+        android:name="com.matematik.antremani.view.screen.game.GameLogicFragment"
+        android:label="fragment_game_logic"
+        tools:layout="@layout/fragment_game_logic" />
+    <fragment
+        android:id="@+id/gameMemoryFragment"
+        android:name="com.matematik.antremani.view.screen.game.GameMemoryFragment"
+        android:label="fragment_game_memory"
+        tools:layout="@layout/fragment_game_memory" />
+    <fragment
+        android:id="@+id/gameDuelFragment"
+        android:name="com.matematik.antremani.view.screen.game.GameDuelFragment"
+        android:label="fragment_game_duel"
+        tools:layout="@layout/fragment_game_duel" />
+    <fragment
+        android:id="@+id/gameJigsawFragment"
+        android:name="com.matematik.antremani.view.screen.game.GameJigsawFragment"
+        android:label="fragment_game_jigsaw"
+        tools:layout="@layout/fragment_game_jigsaw" />
+    <fragment
+        android:id="@+id/gamePasswordFragment"
+        android:name="com.matematik.antremani.view.screen.game.GamePasswordFragment"
+        android:label="GamePasswordFragment"
+        tools:layout="@layout/fragment_game_password"/>
+    <fragment
+        android:id="@+id/gameTicTacToeFragment"
+        android:name="com.matematik.antremani.view.screen.game.GameTicTacToeFragment"
+        android:label="fragment_game_tic_tac_toe"
+        tools:layout="@layout/fragment_game_tictactoe" />
+</navigation>

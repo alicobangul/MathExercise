@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#94DEFE</color>
+    <color name="colorPrimaryDark">#94DEFE</color>
+    <color name="colorAccent">#94DEFE</color>
+    <color name="timeOver">#FECC05</color>
+    <color name="wrongAnswer">#FF0000</color>
+
+    <color name="fragmentBackground">#242424</color>
+
+    <color name="shape_box">#1E1E1E</color>
+
+    <color name="shape_custom_stroke">#1B1B1B</color>
+    <color name="shape_custom_box">#222222</color>
+
+    <color name="progressbarStart">#555555</color>
+    <color name="progressbarEnd">#161616</color>
+
+    <color name="symbolTextBorder">#555555</color>
+    <color name="symbolText">#999999</color>
+
+    <color name="questionText">#AAAAAA</color>
+    <color name="bonusText">#888888</color>
+    <color name="bonusBackground">#161616</color>
+    <color name="progressText">#AAAAAA</color>
+
+    <color name="optionButtonText">#666666</color>
+
+    <color name="gameScreenLevel">#AAAAAA</color>
+
+    <color name="customScreenBoxTitle">#6E6E6E</color>
+    <color name="customScreenItemText">#8E8E8E</color>
+    <color name="customScreenButtonText">#7E7E7E</color>
+
+    <color name="mainLevelText">#6E6E6E</color>
+
+    <color name="gamePuzzleBoxBackground">#161616</color>
+
+    <color name="gamePasswordBoxBackground">#161616</color>
+    <color name="gamePasswordInfoBox">#161616</color>
+
+    <color name="drawColor">#888888</color>
+
+    <color name="saveDialogBackground">#323232</color>
+    <color name="saveDialogText">#AAAAAA</color>
+
+    <color name="customNumberButtonText">#444444</color>
+    <color name="customNumberText">#8E8E8E</color>
+
+    <color name="gameDialogTypeText">#515151</color>
+    <color name="gameDialogLevelOrCorrectText">#6B6B6B</color>
+
+</resources>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_dialog_box"
+                android:orientation="vertical"
+                android:paddingTop="25dp"
+                android:paddingBottom="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <Space style="@style/space" />
+
+                        <TextView
+                            style="@style/savedLevelsDialogText"
+                            android:levelVisibility="@{true}"
+                            android:tag="@string/mode_classic"
+                            app:drawableTopCompat="@drawable/game_mode_classic" />
+
+                        <Space style="@style/space" />
+
+                        <TextView
+                            style="@style/savedLevelsDialogText"
+                            android:levelVisibility="@{true}"
+                            android:tag="@string/mode_puzzle"
+                            app:drawableTopCompat="@drawable/game_mode_puzzle" />
+
+                        <Space style="@style/space" />
+
+                        <TextView
+                            style="@style/savedLevelsDialogText"
+                            android:levelVisibility="@{true}"
+                            android:tag="@string/mode_password"
+                            app:drawableTopCompat="@drawable/game_mode_password" />
+
+                        <Space style="@style/space" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <Space style="@style/space" />
+
+                        <TextView
+                            style="@style/savedLevelsDialogText"
+                            android:levelVisibility="@{true}"
+                            android:tag="@string/mode_logic"
+                            app:drawableTopCompat="@drawable/game_mode_logic" />
+
+                        <Space style="@style/space" />
+
+                        <TextView
+                            style="@style/savedLevelsDialogText"
+                            android:levelVisibility="@{true}"
+                            android:tag="@string/mode_symbol"
+                            app:drawableTopCompat="@drawable/game_mode_symbol" />
+
+                        <Space style="@style/space" />
+
+                        <TextView
+                            style="@style/savedLevelsDialogText"
+                            android:levelVisibility="@{true}"
+                            android:tag="@string/mode_memory"
+                            app:drawableTopCompat="@drawable/game_mode_memory" />
+
+                        <Space style="@style/space" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <Space style="@style/space" />
+
+                        <TextView
+                            style="@style/savedLevelsDialogText"
+                            android:levelVisibility="@{true}"
+                            android:tag="@string/mode_duel"
+                            app:drawableTopCompat="@drawable/game_mode_duel" />
+
+                        <Space style="@style/space" />
+
+                        <TextView
+                            style="@style/savedLevelsDialogText"
+                            android:levelVisibility="@{true}"
+                            android:tag="@string/mode_jigsaw"
+                            app:drawableTopCompat="@drawable/game_mode_jigsaw" />
+
+                        <Space style="@style/space" />
+
+                        <TextView
+                            style="@style/savedLevelsDialogText"
+                            android:levelVisibility="@{true}"
+                            android:tag="@string/mode_tictactoe"
+                            app:drawableTopCompat="@drawable/game_mode_tictactoe" />
+
+                        <Space style="@style/space" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="androidx.lifecycle.MutableLiveData"/>
+        <import type="com.matematik.antremani.model.view.ToolScreen" />
+        <variable name="bonusListener" type="com.matematik.antremani.impl.BonusImpl" />
+        <variable name="tool" type="com.matematik.antremani.model.view.ToolScreen" />
+    </data>
+
+    <LinearLayout
+        style="@style/fragmentStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.screen.game.GamePasswordFragment">
+
+        <include
+            android:id="@+id/includeGameTool"
+            layout="@layout/include_game_tool"
+            app:tool="@{tool}"
+            app:bonusListener="@{bonusListener}"/>
+
+        <LinearLayout
+            android:id="@+id/linearTictactoe"
+            style="@style/gameScreenUserInteraction"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/lineartictactoeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <import type="androidx.lifecycle.MutableLiveData"/>
+        <import type="com.matematik.antremani.model.view.ToolScreen" />
+        <variable name="bonusListener" type="com.matematik.antremani.impl.BonusImpl" />
+        <variable name="tool" type="com.matematik.antremani.model.view.ToolScreen" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/fragmentStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.screen.game.GamePuzzleFragment">
+
+        <include
+            android:id="@+id/includeGameTool"
+            layout="@layout/include_game_tool"
+            app:tool="@{tool}"
+            app:bonusListener="@{bonusListener}"/>
+
+        <GridLayout
+            android:id="@+id/gridGamePuzzle"
+            style="@style/gameScreenUserInteraction"
+            android:layout_marginTop="5dp"
+            android:columnCount="8"
+            android:rowCount="6" />
+
+    </LinearLayout>
+</layout>

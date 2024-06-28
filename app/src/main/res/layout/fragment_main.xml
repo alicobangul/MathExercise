@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/mainFragmentStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.screen.MainFragment">
+
+        <Button
+            android:id="@+id/btnLevelGameStart"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:background="@drawable/shape_main_button_play"
+            android:tag="levelGameStart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.332" />
+
+        <Button
+            android:id="@+id/btnCustomGameSettings"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/shape_main_button_custom"
+            android:tag="customGameSettings"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.658" />
+
+        <ImageView
+            android:id="@+id/imgAllLevels"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:tag="allLevels"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.015"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.020"
+            app:srcCompat="@drawable/crown" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.91">
+
+            <View style="@style/space"/>
+
+            <Button
+                android:id="@+id/btnShare"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/shape_main_button_share"
+                android:tag="share" />
+
+            <View style="@style/space"/>
+
+            <Button
+                android:id="@+id/btnComment"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/shape_main_button_comment"
+                android:tag="comment" />
+
+            <View style="@style/space"/>
+
+            <Button
+                android:id="@+id/btnMoreApp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/shape_main_button_moreapp"
+                android:tag="moreApp" />
+
+            <View style="@style/space"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

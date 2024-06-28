@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Matematik Antrenmanı</string>
+    <string name="gameModeLevel">LEVEL</string>
+    <string name="gameModeCustom">CUSTOM</string>
+    <string name="titleGameMode">Oyun Modu</string>
+    <string name="time">Zaman</string>
+    <string name="titleInterface">Arayüz</string>
+    <string name="titleTime">Süre</string>
+    <string name="titleNumber">Sayılar</string>
+    <string name="titleOperator">İşlemler</string>
+
+    <string name="gameModeClassic">Klasik</string>
+    <string name="gameModePuzzle">Bulmaca</string>
+    <string name="gameModePassword">Şifre</string>
+    <string name="gameModeLogic">Mantık</string>
+    <string name="gameModeSymbol">Sembol</string>
+    <string name="gameModeMemory">Hafıza</string>
+    <string name="gameModeDuel">Düello</string>
+    <string name="gameModeJigsaw">Yapboz</string>
+    <string name="gameModeTicTacToe">X O X</string>
+
+    <string name="gameInterfaceOption">Seçenek</string>
+    <string name="gameInterfaceTrueFalse">Doğru Yanlış</string>
+    <string name="gameInterfaceDraw">Çizim</string>
+
+    <string name="gameBonusEasier">DAHA KOLAY</string>
+    <string name="gameBonusAddTime">+ SÜRE</string>
+    <string name="gameBonusNoTime">ZAMANI DURDUR</string>
+    <string name="gameBonusClue">İPUCU</string>
+
+    <string name="timeModeTimer">Sayaç</string>
+    <string name="timeModeFixed">Sabit</string>
+    <string name="timeModeAddTime">Bonus</string>
+    <string name="timeModeNoTime">Süresiz</string>
+
+    <string name="btnCustomStart">OYUNU BAŞLAT</string>
+
+    <string name="equals">eşittir</string>
+    <string name="and">ve</string>
+
+    <string name="plus">artı</string>
+    <string name="minus">eksi</string>
+    <string name="times">çarpı</string>
+    <string name="dividedby">bölü</string>
+
+    <string name="questionOperator">İşlem ?</string>
+
+    <string name="timeOver">SÜRE BİTTİ</string>
+    <string name="wrongAnswer">YANLIŞ CEVAP</string>
+    <string name="levelText">LEVEL</string>
+    <string name="correctText">DOĞRU CEVAP</string>
+    <string name="tryAgain">Tekrar Dene</string>
+    <string name="useBonus">Bonus Kullan</string>
+    <string name="returnMainMenu">Ana Menüye Dön</string>
+
+    <string name="exit">Çıkış</string>
+    <string name="yes">EVET</string>
+    <string name="no">HAYIR</string>
+    <string name="okey">TAMAM</string>
+
+    <string name="gameTypeTitle">Level Modu</string>
+
+    <string name="exitGame">Oyundan çıkmak istiyor musun ?</string>
+    <string name="saveSettings">Oyun ayarları kaydedilsin mi ?</string>
+    <string name="restoreSettings">Kayıtlı oyun ayarları getirilsin mi ?</string>
+
+    <string name="checkConnection">İnternet bağlantınızın açık olduğundan emin olun</string>
+
+    <string name="visitStoreInformation">Mağazamızı ziyaret etmek ister misiniz? (Harici bağlantı açılacak)</string>
+    <string name="thanksForComment">Değerlendirme için teşekkürler :)</string>
+    <string name="commentError">Hata oluştu, mağazamızı ziyaret etmek ister misiniz ?</string>
+    <string name="technicalError">Teknik hata oluştu, lütfen uygulamayı yeniden başlatın</string>
+
+    <string name="invitation_message">&#160;şimdi Play Store\'da :&#160;</string>
+
+</resources>

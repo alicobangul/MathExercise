@@ -1,0 +1,91 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+
+    namespace 'com.matematik.antremani'
+
+    defaultConfig {
+        applicationId "com.matematik.antremani"
+        minSdkVersion 21
+        targetSdkVersion 34
+        compileSdk 34
+        versionCode 32
+        versionName "3.2"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        dataBinding true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.activity:activity:1.8.0'
+    def playCore = "1.10.0"
+    def playServicesAds = "22.6.0"
+    def workRuntime ="2.9.0"
+
+    def nav_version = "2.5.3"
+    def savedStateHandle = "1.2.0"
+    def material = "1.11.0"
+    def gridLayout = "1.0.0"
+    def rxJava = "2.0.1"
+
+    def glide = "4.16.0"
+
+    def hilt_version = "2.38.1"
+
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation "androidx.constraintlayout:constraintlayout:2.1.4"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation "com.google.android.play:core:$playCore"
+
+    implementation "com.google.android.gms:play-services-ads:$playServicesAds"
+    implementation "androidx.work:work-runtime:$workRuntime"
+
+    implementation "com.google.android.material:material:$material"
+    implementation "androidx.gridlayout:gridlayout:$gridLayout"
+
+    // Fragment-Navigation
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
+
+    // SavedStateHandle
+    implementation "androidx.savedstate:savedstate:$savedStateHandle"
+
+    // RxJava
+    implementation "io.reactivex.rxjava2:rxandroid:$rxJava"
+
+    // Glide
+    implementation "com.github.bumptech.glide:glide:$glide"
+
+    // Dagger-Hilt
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
+
+}

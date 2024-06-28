@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="androidx.lifecycle.MutableLiveData"/>
+        <import type="com.matematik.antremani.model.view.ToolScreen" />
+        <variable name="bonusListener" type="com.matematik.antremani.impl.BonusImpl" />
+        <variable name="tool" type="com.matematik.antremani.model.view.ToolScreen" />
+    </data>
+
+    <LinearLayout
+        style="@style/fragmentStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.4"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:showIn="@layout/fragment_game_classic">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/back" />
+
+            <TextView
+                android:id="@+id/txtGameLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:text="@{tool.levelOrCorrectText}"
+                android:textColor="@color/gameScreenLevel"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            tools:showIn="@layout/fragment_game_puzzle">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/progressBarGame"
+                app:layout_constraintEnd_toStartOf="@+id/progressBarGame"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/progressBarGame">
+
+                <Button
+                    android:id="@+id/btnBonusEasier"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/shape_bonus_button_left"
+                    android:onClick="@{() -> bonusListener.bonusListener(btnBonusEasier.getText().toString())}"
+                    android:text="@string/gameBonusEasier"
+                    android:textAlignment="center"
+                    android:textColor="@color/bonusText"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:visibility="@{tool.bonusEasierVisibility}" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5" />
+
+                <Button
+                    android:id="@+id/btnBonusClue"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/shape_bonus_button_left"
+                    android:text="@string/gameBonusClue"
+                    android:visibility="@{tool.bonusClueVisibility}"
+                    android:onClick="@{() -> bonusListener.bonusListener(btnBonusClue.getText().toString())}"
+                    android:textAlignment="center"
+                    android:textColor="@color/bonusText"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/progressBarGame"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/progressBarGame"
+                app:layout_constraintTop_toTopOf="@+id/progressBarGame">
+
+                <Button
+                    android:id="@+id/btnBonusAddTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/shape_bonus_button_right"
+                    android:text="@string/gameBonusAddTime"
+                    android:visibility="@{tool.bonusAddTimeVisibility}"
+                    android:onClick="@{() -> bonusListener.bonusListener(btnBonusAddTime.getText().toString())}"
+                    android:textAlignment="center"
+                    android:textColor="@color/bonusText"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5" />
+
+                <Button
+                    android:id="@+id/btnBonusNoTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/shape_bonus_button_right"
+                    android:text="@string/gameBonusNoTime"
+                    android:visibility="@{tool.bonusNoTimeVisibility}"
+                    android:onClick="@{() -> bonusListener.bonusListener(btnBonusNoTime.getText().toString())}"
+                    android:textAlignment="center"
+                    android:textColor="@color/bonusText"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBarGame"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:indeterminateOnly="false"
+                android:max="@{tool.time}"
+                android:progress="@{tool.currentTime}"
+                android:progressDrawable="@drawable/shape_progressbar"
+                android:rotation="-90"
+                android:rotationY="180"
+                android:saveEnabled="false"
+                android:visibility="@{tool.timeProgressVisibility}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtGameProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{String.valueOf(tool.currentTime)}"
+                android:visibility="@{tool.timeTextVisibility}"
+                android:textColor="@color/progressText"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/progressBarGame"
+                app:layout_constraintEnd_toEndOf="@+id/progressBarGame"
+                app:layout_constraintStart_toStartOf="@+id/progressBarGame"
+                app:layout_constraintTop_toTopOf="@+id/progressBarGame" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+</layout>

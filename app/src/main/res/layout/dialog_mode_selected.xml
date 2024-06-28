@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="selectedMode" type="String" />
+        <variable name="dialog" type="com.matematik.antremani.view.dialog.NewGameDialog" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLevelDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/linearLevelDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_dialog_box"
+                android:orientation="vertical"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <RadioButton
+                            android:id="@+id/rdGameModeClassic"
+                            style="@style/modeSelectedDialogRadio"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:checkedGameMode="@{selectedMode}"
+                            android:onClick="@{dialog::radioButtonClick}"
+                            android:drawableTop="@drawable/game_mode_classic"
+                            android:tag="@string/mode_classic"
+                            android:text="@string/gameModeClassic" />
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <RadioButton
+                            android:id="@+id/rdGameModePuzzle"
+                            style="@style/modeSelectedDialogRadio"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:checkedGameMode="@{selectedMode}"
+                            android:onClick="@{dialog::radioButtonClick}"
+                            android:drawableTop="@drawable/game_mode_puzzle"
+                            android:tag="@string/mode_puzzle"
+                            android:text="@string/gameModePuzzle" />
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <RadioButton
+                            android:id="@+id/rdGameModePassword"
+                            style="@style/modeSelectedDialogRadio"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="25dp"
+                            android:checkedGameMode="@{selectedMode}"
+                            android:onClick="@{dialog::radioButtonClick}"
+                            android:drawableTop="@drawable/game_mode_password"
+                            android:tag="@string/mode_password"
+                            android:text="@string/gameModePassword" />
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <RadioButton
+                            android:id="@+id/rdGameModeLogic"
+                            style="@style/modeSelectedDialogRadio"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:drawableTop="@drawable/game_mode_logic"
+                            android:checkedGameMode="@{selectedMode}"
+                            android:onClick="@{dialog::radioButtonClick}"
+                            android:tag="@string/mode_logic"
+                            android:text="@string/gameModeLogic" />
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <RadioButton
+                            android:id="@+id/rdGameModeSymbol"
+                            style="@style/modeSelectedDialogRadio"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:checkedGameMode="@{selectedMode}"
+                            android:onClick="@{dialog::radioButtonClick}"
+                            android:drawableTop="@drawable/game_mode_symbol"
+                            android:tag="@string/mode_symbol"
+                            android:text="@string/gameModeSymbol" />
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <RadioButton
+                            android:id="@+id/rdGameModeMemory"
+                            style="@style/modeSelectedDialogRadio"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="25dp"
+                            android:checkedGameMode="@{selectedMode}"
+                            android:onClick="@{dialog::radioButtonClick}"
+                            android:drawableTop="@drawable/game_mode_memory"
+                            android:tag="@string/mode_memory"
+                            android:text="@string/gameModeMemory" />
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="25dp"
+                        android:orientation="horizontal">
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <RadioButton
+                            android:id="@+id/rdGameModeDuel"
+                            style="@style/modeSelectedDialogRadio"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:checkedGameMode="@{selectedMode}"
+                            android:onClick="@{dialog::radioButtonClick}"
+                            android:drawableTop="@drawable/game_mode_duel"
+                            android:tag="@string/mode_duel"
+                            android:text="@string/gameModeDuel" />
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <RadioButton
+                            android:id="@+id/rdGameModeJigsaw"
+                            style="@style/modeSelectedDialogRadio"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:drawableTop="@drawable/game_mode_jigsaw"
+                            android:checkedGameMode="@{selectedMode}"
+                            android:onClick="@{dialog::radioButtonClick}"
+                            android:tag="@string/mode_jigsaw"
+                            android:text="@string/gameModeJigsaw" />
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <RadioButton
+                            android:id="@+id/rdGameModeTicTacToe"
+                            style="@style/modeSelectedDialogRadio"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="25dp"
+                            android:checkedGameMode="@{selectedMode}"
+                            android:drawableTop="@drawable/game_mode_tictactoe"
+                            android:onClick="@{dialog::radioButtonClick}"
+                            android:tag="@string/mode_tictactoe"
+                            android:text="@string/gameModeTicTacToe" />
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/btnOkey"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/shape_dialog_okey"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLevelDialog"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLevelDialog"
+            app:layout_constraintStart_toStartOf="@+id/constraintLevelDialog"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLevelDialog" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

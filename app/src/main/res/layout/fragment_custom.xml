@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_weight="1">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable name="viewModel" type="com.matematik.antremani.viewmodel.view.CustomViewModel" />
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+            style="@style/fragmentStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="HardcodedText"
+            tools:context=".view.screen.CustomFragment"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View style="@style/space" />
+
+                <LinearLayout style="@style/customScreenBox">
+
+                    <TextView
+                        style="@style/customScreenBoxTitle"
+                        android:layout_width="match_parent"
+                        android:text="@string/titleGameMode" />
+
+                    <LinearLayout
+                        style="@style/customScreenBoxContent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="horizontal">
+
+                            <View style="@style/space" />
+
+                            <RadioButton
+                                android:id="@+id/rdGameModeClassic"
+                                style="@style/customScreenRadio"
+                                android:layout_width="wrap_content"
+                                android:checked="true"
+                                android:checkedGameMode="@{viewModel.customSettings.gameMode}"
+                                android:drawableTop="@drawable/game_mode_classic"
+                                android:onCheckedChanged="@{(view, bool) -> viewModel.gameModeChangedListener(view,bool)}"
+                                android:tag="@string/mode_classic"
+                                android:text="@string/gameModeClassic" />
+
+                            <View style="@style/space" />
+
+                            <RadioButton
+                                android:id="@+id/rdGameModePuzzle"
+                                style="@style/customScreenRadio"
+                                android:checkedGameMode="@{viewModel.customSettings.gameMode}"
+                                android:drawableTop="@drawable/game_mode_puzzle"
+                                android:onCheckedChanged="@{(view, bool) -> viewModel.gameModeChangedListener(view,bool)}"
+                                android:tag="@string/mode_puzzle"
+                                android:text="@string/gameModePuzzle" />
+
+                            <View style="@style/space" />
+
+                            <RadioButton
+                                android:id="@+id/rdGameModePassword"
+                                style="@style/customScreenRadio"
+                                android:checkedGameMode="@{viewModel.customSettings.gameMode}"
+                                android:drawableTop="@drawable/game_mode_password"
+                                android:onCheckedChanged="@{(view, bool) -> viewModel.gameModeChangedListener(view,bool)}"
+                                android:tag="@string/mode_password"
+                                android:text="@string/gameModePassword" />
+
+                            <View style="@style/space" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="horizontal">
+
+                            <View style="@style/space" />
+
+                            <RadioButton
+                                android:id="@+id/rdGameModeLogic"
+                                style="@style/customScreenRadio"
+                                android:checkedGameMode="@{viewModel.customSettings.gameMode}"
+                                android:drawableTop="@drawable/game_mode_logic"
+                                android:onCheckedChanged="@{(view, bool) -> viewModel.gameModeChangedListener(view,bool)}"
+                                android:tag="@string/mode_logic"
+                                android:text="@string/gameModeLogic" />
+
+                            <View style="@style/space" />
+
+                            <RadioButton
+                                android:id="@+id/rdGameModeSymbol"
+                                style="@style/customScreenRadio"
+                                android:checkedGameMode="@{viewModel.customSettings.gameMode}"
+                                android:drawableTop="@drawable/game_mode_symbol"
+                                android:onCheckedChanged="@{(view, bool) -> viewModel.gameModeChangedListener(view,bool)}"
+                                android:tag="@string/mode_symbol"
+                                android:text="@string/gameModeSymbol" />
+
+                            <View style="@style/space" />
+
+                            <RadioButton
+                                android:id="@+id/rdGameModeMemory"
+                                style="@style/customScreenRadio"
+                                android:checkedGameMode="@{viewModel.customSettings.gameMode}"
+                                android:drawableTop="@drawable/game_mode_memory"
+                                android:onCheckedChanged="@{(view, bool) -> viewModel.gameModeChangedListener(view,bool)}"
+                                android:tag="@string/mode_memory"
+                                android:text="@string/gameModeMemory" />
+
+                            <View style="@style/space" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="horizontal">
+
+                            <View style="@style/space" />
+
+                            <RadioButton
+                                android:id="@+id/rdGameModeDuel"
+                                style="@style/customScreenRadio"
+                                android:checkedGameMode="@{viewModel.customSettings.gameMode}"
+                                android:drawableTop="@drawable/game_mode_duel"
+                                android:onCheckedChanged="@{(view, bool) -> viewModel.gameModeChangedListener(view,bool)}"
+                                android:tag="@string/mode_duel"
+                                android:text="@string/gameModeDuel" />
+
+                            <View style="@style/space" />
+
+                            <RadioButton
+                                android:id="@+id/rdGameModeJigsaw"
+                                style="@style/customScreenRadio"
+                                android:checkedGameMode="@{viewModel.customSettings.gameMode}"
+                                android:drawableTop="@drawable/game_mode_jigsaw"
+                                android:onCheckedChanged="@{(view, bool) -> viewModel.gameModeChangedListener(view,bool)}"
+                                android:tag="@string/mode_jigsaw"
+                                android:text="@string/gameModeJigsaw" />
+
+                            <View style="@style/space" />
+
+                            <RadioButton
+                                android:id="@+id/rdGameModeTicTacToe"
+                                style="@style/customScreenRadio"
+                                android:checkedGameMode="@{viewModel.customSettings.gameMode}"
+                                android:drawableTop="@drawable/game_mode_tictactoe"
+                                android:onCheckedChanged="@{(view, bool) -> viewModel.gameModeChangedListener(view,bool)}"
+                                android:tag="@string/mode_tictactoe"
+                                android:text="@string/gameModeTicTacToe" />
+
+                            <View style="@style/space" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View style="@style/space" />
+
+                <LinearLayout style="@style/customScreenBox">
+
+                    <TextView
+                        style="@style/customScreenBoxTitle"
+                        android:text="@string/time" />
+
+                    <LinearLayout
+                        style="@style/customScreenBoxContent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <RadioButton
+                                android:id="@+id/rdTimeModeMeter"
+                                style="@style/customScreenRadio"
+                                android:checked="true"
+                                android:checkedTimeMode="@{viewModel.customSettings}"
+                                android:drawableTop="@drawable/timemode_stopwatch"
+                                android:onCheckedChanged="@{(view, bool) -> viewModel.timeModeChangedListener(view,bool)}"
+                                android:tag="@string/time_meter"
+                                android:text="@string/timeModeTimer" />
+
+                            <RadioButton
+                                android:id="@+id/rdTimeModeFixed"
+                                style="@style/customScreenRadio"
+                                android:checkedTimeMode="@{viewModel.customSettings}"
+                                android:drawableTop="@drawable/timemode_fixed"
+                                android:onCheckedChanged="@{(view, bool) -> viewModel.timeModeChangedListener(view,bool)}"
+                                android:tag="@string/time_fixed"
+                                android:text="@string/timeModeFixed" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <RadioButton
+                                android:id="@+id/rdTimeModeBonus"
+                                style="@style/customScreenRadio"
+                                android:checkedTimeMode="@{viewModel.customSettings}"
+                                android:drawableTop="@drawable/timemode_add"
+                                android:onCheckedChanged="@{(view, bool) -> viewModel.timeModeChangedListener(view,bool)}"
+                                android:tag="@string/time_bonus"
+                                android:text="@string/timeModeAddTime" />
+
+                            <RadioButton
+                                android:id="@+id/rdTimeModeNoTime"
+                                style="@style/customScreenRadio"
+                                android:checkedTimeMode="@{viewModel.customSettings}"
+                                android:drawableTop="@drawable/timemode_notime"
+                                android:onCheckedChanged="@{(view, bool) -> viewModel.timeModeChangedListener(view,bool)}"
+                                android:tag="@string/time_notime"
+                                android:text="@string/timeModeNoTime" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View style="@style/space" />
+
+                <LinearLayout style="@style/customScreenBox">
+
+                    <TextView
+                        style="@style/customScreenBoxTitle"
+                        android:text="@string/titleTime" />
+
+                    <LinearLayout
+                        style="@style/customScreenBoxContent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <SeekBar
+                            android:id="@+id/seekBarTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:duplicateParentState="false"
+                            android:fadeScrollbars="false"
+                            android:filterTouchesWhenObscured="false"
+                            android:fitsSystemWindows="false"
+                            android:indeterminate="false"
+                            android:max="@{viewModel.customSettings.maxTime}"
+                            android:onProgressChanged="@{(view, progress, fromUser) -> viewModel.timeChangedListener(view, progress, fromUser)}"
+                            android:progress="@{viewModel.customSettings.time}"
+                            android:soundEffectsEnabled="false" />
+
+                        <TextView
+                            android:id="@+id/txtSeekBarValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.20"
+                            android:text="@{String.valueOf(viewModel.customSettings.time)}"
+                            android:textAlignment="center"
+                            android:textColor="@color/customScreenItemText"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:visibility="@{viewModel.customSettings.isTimeEnabled ? View.VISIBLE : View.INVISIBLE}" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View style="@style/space" />
+
+                <LinearLayout style="@style/customScreenBox">
+
+                    <TextView
+                        style="@style/customScreenBoxTitle"
+                        android:text="@string/titleNumber" />
+
+                    <LinearLayout
+                        style="@style/customScreenBoxContent"
+                        android:orientation="horizontal">
+
+                        <View style="@style/space" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/customNumberText"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <View style="@style/space" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="-"
+                            android:textColor="@color/customNumberText"
+                            android:textSize="24sp" />
+
+                        <View style="@style/space" />
+
+                        <EditText
+                            android:id="@+id/txtNumberRange"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:afterTextChanged="@{(editable) -> viewModel.numberRangeTextListener(editable)}"
+                            android:background="@android:color/transparent"
+                            android:ems="4"
+                            android:inputType="number"
+                            android:text="@{viewModel.customSettings.numberRange}"
+                            android:textAlignment="center"
+                            android:textColor="@color/customNumberText"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <View style="@style/space" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View style="@style/space" />
+
+                <LinearLayout style="@style/customScreenBox">
+
+                    <TextView
+                        style="@style/customScreenBoxTitle"
+                        android:text="@string/titleOperator" />
+
+                    <LinearLayout
+                        style="@style/customScreenBoxContent"
+                        android:orientation="horizontal">
+
+                        <View style="@style/space" />
+
+                        <CheckBox
+                            android:id="@+id/chkOperatorAddition"
+                            style="@style/customScreenCheckBox"
+                            android:drawableEnd="@drawable/operator_plus"
+                            android:checked="@{viewModel.customSettings.addition}"
+                            android:onCheckedChanged="@{(view, checked) -> viewModel.operatorCheckedListener(view, checked)}"
+                            android:tag="@string/operator_addition" />
+
+                        <View style="@style/space" />
+
+                        <CheckBox
+                            android:id="@+id/chkOperatorSubtraction"
+                            style="@style/customScreenCheckBox"
+                            android:checked="@{viewModel.customSettings.subtraction}"
+                            android:onCheckedChanged="@{(view, checked) -> viewModel.operatorCheckedListener(view, checked)}"
+                            android:drawableEnd="@drawable/operator_subraction"
+                            android:tag="@string/operator_subtraction" />
+
+                        <View style="@style/space" />
+
+                        <CheckBox
+                            android:id="@+id/chkOperatorMultiply"
+                            style="@style/customScreenCheckBox"
+                            android:checked="@{viewModel.customSettings.multiply}"
+                            android:onCheckedChanged="@{(view, checked) -> viewModel.operatorCheckedListener(view, checked)}"
+                            android:drawableEnd="@drawable/operator_multiply"
+                            android:tag="@string/operator_multiply" />
+
+                        <View style="@style/space" />
+
+                        <CheckBox
+                            android:id="@+id/chkOperatorDivision"
+                            style="@style/customScreenCheckBox"
+                            android:checked="@{viewModel.customSettings.division}"
+                            android:onCheckedChanged="@{(view, checked) -> viewModel.operatorCheckedListener(view, checked)}"
+                            android:drawableEnd="@drawable/operator_division"
+                            android:tag="@string/operator_division" />
+
+                        <View style="@style/space" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View style="@style/space" />
+
+                <Button
+                    android:id="@+id/btnCustomGameStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#000000"
+                    android:text="@string/btnCustomStart"
+                    android:onClick="@{viewModel::startCustomGame}"
+                    android:textColor="@color/customScreenButtonText"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <View style="@style/space" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+</layout>

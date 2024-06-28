@@ -1,0 +1,84 @@
+<resources>
+
+    <string name="app_name">Math Exercise</string>
+    <string name="playstore_app_link" translatable="false">https://play.google.com/store/apps/details?id=com.matematik.antremani</string>
+    <string name="playstore_developer_link" translatable="false">https://play.google.com/store/apps/dev?id=5331910607568886585</string>
+
+    <string name="gameModeLevel">LEVEL</string>
+    <string name="gameModeCustom">CUSTOM</string>
+
+    <string name="titleGameMode">Game Mode</string>
+    <string name="time">Time</string>
+    <string name="titleInterface">Interface</string>
+    <string name="titleTime">Time</string>
+    <string name="titleNumber">Numbers</string>
+    <string name="titleOperator">Operators</string>
+
+    <string name="gameModeClassic">Classic</string>
+    <string name="gameModePuzzle">Puzzle</string>
+    <string name="gameModePassword">Password</string>
+    <string name="gameModeLogic">Logic</string>
+    <string name="gameModeSymbol">Symbol</string>
+    <string name="gameModeMemory">Memory</string>
+    <string name="gameModeDuel">Duel</string>
+    <string name="gameModeJigsaw">Jigsaw</string>
+    <string name="gameModeTicTacToe">X O X</string>
+
+    <string name="gameInterfaceOption">Option</string>
+    <string name="gameInterfaceTrueFalse">True False</string>
+    <string name="gameInterfaceDraw">Draw</string>
+
+    <string name="gameBonusEasier">EASIER</string>
+    <string name="gameBonusAddTime">+ TIME</string>
+    <string name="gameBonusNoTime">NO TIME</string>
+    <string name="gameBonusClue">CLUE</string>
+
+    <string name="timeModeTimer">Meter</string>
+    <string name="timeModeFixed">Fixed</string>
+    <string name="timeModeAddTime">Bonus</string>
+    <string name="timeModeNoTime">No Time</string>
+
+    <string name="btnCustomStart">START GAME</string>
+
+    <string name="equals">equals</string>
+    <string name="and">and</string>
+
+    <string name="plus">plus</string>
+    <string name="minus">minus</string>
+    <string name="times">times</string>
+    <string name="dividedby">dividedby</string>
+
+    <string name="questionResult" translatable="false">= ?</string>
+    <string name="questionNumber" translatable="false">X ?</string>
+    <string name="questionOperator">Operator ?</string>
+
+    <string name="timeOver">TIME OVER</string>
+    <string name="wrongAnswer">WRONG ANSWER</string>
+    <string name="levelText">LEVEL</string>
+    <string name="correctText">CORRECT ANSWER</string>
+    <string name="tryAgain">Try Again</string>
+    <string name="useBonus">Use a Bonus</string>
+    <string name="returnMainMenu">Return to Main Menu</string>
+
+    <string name="exit">Exit</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="okey">TAMAM</string>
+
+    <string name="gameTypeTitle">Level Mode</string>
+
+    <string name="exitGame">Do you want to exit the game ?</string>
+    <string name="saveSettings">Should the game settings be saved ?</string>
+    <string name="restoreSettings">Should the saved game settings be retrieved ?</string>
+
+    <string name="checkConnection">Make sure that your internet connection is open</string>
+
+    <string name="visitStoreInformation">Would you like to visit our store? (An external link will be opened)</string>
+    <string name="thanksForComment">Thank you for your review :)</string>
+    <string name="commentError">An error occurred, would you like to visit our store?</string>
+    <string name="technicalError">An unexpected technical error has occurred, please restart the application</string>
+
+    <string name="invitation_message">&#160;is now available on the Play Store :&#160;</string>
+
+
+</resources>

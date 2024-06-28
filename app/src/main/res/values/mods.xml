@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="mode_classic" translatable="false">MODE_CLASSIC</string>
+    <string name="mode_puzzle" translatable="false">MODE_PUZZLE</string>
+    <string name="mode_password" translatable="false">MODE_PASSWORD</string>
+    <string name="mode_logic" translatable="false">MODE_LOGIC</string>
+    <string name="mode_symbol" translatable="false">MODE_SYMBOL</string>
+    <string name="mode_memory" translatable="false">MODE_MEMORY</string>
+    <string name="mode_duel" translatable="false">MODE_DUEL</string>
+    <string name="mode_jigsaw" translatable="false">MODE_JIGSAW</string>
+    <string name="mode_tictactoe" translatable="false">MODE_TICTACTOE</string>
+
+    <string name="interface_option" translatable="false">INTERFACE_OPTION</string>
+    <string name="interface_truefalse" translatable="false">INTERFACE_TRUEFALSE</string>
+    <string name="interface_draw" translatable="false">INTERFACE_DRAW</string>
+
+    <string name="time_meter" translatable="false">TIME_METER</string>
+    <string name="time_bonus" translatable="false">TIME_BONUS</string>
+    <string name="time_fixed" translatable="false">TIME_FIXED</string>
+    <string name="time_notime" translatable="false">TIME_NOTIME</string>
+
+    <string name="operator_addition" translatable="false">OPERATOR_ADDITION</string>
+    <string name="operator_subtraction" translatable="false">OPERATOR_SUBTRACTION</string>
+    <string name="operator_multiply" translatable="false">OPERATOR_MULTIPLY</string>
+    <string name="operator_division" translatable="false">OPERATOR_DIVISION</string>
+
+</resources>
